@@ -1,9 +1,9 @@
 FROM node
-LABEL maintainer ian.miell@gmail.com
-RUN git clone https://github.com/docker-in-practice/todo.git
+MAINTAINER naveenkumaran.a@gmail.com
+RUN git clone -q https://github.com/naveenkumaran/todo.git
 WORKDIR todo
-RUN npm install
-RUN chmod -R 777 /todo
+RUN npm install > /dev/null
 EXPOSE 8000
-CMD ["npm","start"]
+CMD ["npm", "start"]
+
 
